@@ -1,23 +1,5 @@
 {
-  "name": "symbolton",
-  "version": "1.0.0",
-  "description": "",
-  "main": "app.js",
-  "scripts": {
-    "test": "node website/app.js"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+ssh://git@github.com/BL-CZY/symbolton.git"
-  },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/BL-CZY/symbolton/issues"
-  },
-  "homepage": "https://github.com/BL-CZY/symbolton#readme",
   "dependencies": {
-    "ejs": "^3.1.9",
-    "express": "^4.18.2"
+    "svelte": "^4.2.12"
   }
 }
