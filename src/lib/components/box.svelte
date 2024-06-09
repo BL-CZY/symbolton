@@ -32,14 +32,35 @@
     
     label {
         font-size: 35px;
+        cursor: auto;
     }
-    </style>
 
-<script>
-    export let text;
-    export let color1;
-    export let color2;
-    export let color3;
+    button {
+        padding: 5px 10px 5px 10px;
+        border: 0px;
+        border-radius: 5px;
+        font-size: 13px;
+        transition: all 0.5s;
+    }
+
+    button:hover {
+        transform: scale(1.1);
+    }
+
+    button:active {
+        transform: scale(0.8);
+    }
+</style>
+
+<script lang="ts">
+    export let text: string;
+    export let color1: string;
+    export let color2: string;
+    export let color3: string;
+
+    let add_to_clipboard = () => {
+        navigator.clipboard.writeText(text);
+    }
 </script>
 
 <div class="box" style="--color-1: {color1}; --color-2: {color2};">
@@ -47,7 +68,7 @@
     <div class="inner" style="--color-3: {color3}">
         <div class="space"></div>
         <!-- svelte-ignore a11y-label-has-associated-control -->
-        <label class="text">{text}</label><br>
-        <button id="cp_btn">copy to clipboard</button>
+        <label class="text">{text}</label><br><br>
+        <button id="cp_btn" on:click={add_to_clipboard}>copy</button>
     </div>
 </div>
